@@ -32,3 +32,6 @@ tmp.*
 
 # Ontop specific
 plugin-runtime
+
+#Too large file
+imdbobda-pgsql.dump
