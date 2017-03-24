@@ -3,7 +3,7 @@ FROM wnameless/oracle-xe-11g
 
 
 # copying all SQL files to this folder will automatically put them in the default DB
-COPY sql/oracle/*.sql /docker-entrypoint-initdb.d/
+COPY sql/*.sql /docker-entrypoint-initdb.d/
 
 
 

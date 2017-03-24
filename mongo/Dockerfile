@@ -8,7 +8,7 @@ RUN mkdir -p /data/mongo_data \
 COPY load-scripts-mongo.sh /data/mongo_data
 
 RUN mkdir -p /tmp/sql_scripts/
-COPY sql/mongo/*.js /tmp/sql_scripts/
+COPY sql/*.js /tmp/sql_scripts/
 
 
 RUN mongod --fork --logpath /var/log/mongodb.log --dbpath /data/mongo_data \
