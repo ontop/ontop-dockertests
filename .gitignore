@@ -33,5 +33,3 @@ tmp.*
 # Ontop specific
 plugin-runtime
 
-#Big files ignore
-/pgsql/sql/imdbobda-pgsql.dump

@@ -7,7 +7,7 @@ ENV ACCEPT_EULA=Y \
     LANGUAGE='C.UTF-8'
 ENV SA_PASSWORD='Mssql1.0'
 
-# Install node/npm
+# Install
 RUN  locale-gen en_US.UTF-8 && \
       update-locale && \
       apt-get  update  && \
@@ -21,7 +21,7 @@ RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
 
 RUN mkdir -p /tmp/sql_scripts/
 
-COPY sql/ /tmp/sql_scripts/
+COPY sql/*.sql /tmp/sql_scripts/
 
 COPY load-scripts-mssql.sh /var/opt/mssql/data/
 
