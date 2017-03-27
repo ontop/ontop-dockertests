@@ -2,7 +2,7 @@ Mongo image from mongo official to test [ontop system](https://github.com/ontop/
 
 To start a container:
 ```
-docker run --name ontop_mongo_running -d ontop_mongo
+docker run --name ontop_mongo_running -d ontop/ontop-mongo
 
 ```
 License

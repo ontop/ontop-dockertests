@@ -1,2 +1,2 @@
 #/bin/bash
-docker build -t ontop_mssql -f Dockerfile .
+docker build -t ontop/ontop-mssql -f Dockerfile .

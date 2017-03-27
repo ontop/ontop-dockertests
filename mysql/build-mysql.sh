@@ -1,2 +1,2 @@
 #/bin/bash
-docker build -t ontop_mysql -f Dockerfile .
+docker build -t ontop/ontop-mysql -f Dockerfile .

@@ -1,2 +1,2 @@
 #/bin/bash
-docker build -t ontop_oracle -f Dockerfile .
+docker build -t ontop/ontop-oracle -f Dockerfile .

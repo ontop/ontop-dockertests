@@ -1,2 +1,2 @@
 #/bin/bash
-docker build -t ontop_mongo -f Dockerfile .
+docker build -t ontop/ontop-mongo -f Dockerfile .

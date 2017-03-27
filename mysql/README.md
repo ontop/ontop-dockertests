@@ -2,7 +2,7 @@ Mysql image from mysql official to test [ontop system](https://github.com/ontop/
 
 To start a container:
 ```
-docker run --name ontop_mysql_running -p 3694:3306 -e MYSQL_ROOT_PASSWORD=mysql -d ontop_mysql
+docker run --name ontop_mysql_running -p 3694:3306 -e MYSQL_ROOT_PASSWORD=mysql -d ontop/ontop-mysql
 
 ```
 License

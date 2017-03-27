@@ -2,7 +2,7 @@ Pgsql image form postgres official to test [ontop system](https://github.com/ont
 
 To start a container:
 ```
-docker run --name ontop_postgres_running -p 7777:5432 -e POSTGRES_PASSWORD=postgres2 -d ontop_postgres
+docker run --name ontop_postgres_running -p 7777:5432 -e POSTGRES_PASSWORD=postgres2 -d ontop/ontop-postgres
 ```
 License
 The Dockerfile and associated scripts are licensed under the Apache License 2.0. 
