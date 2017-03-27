@@ -1,5 +1,5 @@
 
-FROM ibmcom/db2express-c
+FROM ibmcom/db2express-c:10.5.0.5-3.10.0
 
 RUN mkdir -p /tmp/sql_scripts/
 

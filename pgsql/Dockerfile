@@ -3,7 +3,7 @@
 # run with   
 # docker run --name ontop_psql_running -p 5432:5432 -e POSTGRES_PASSWORD=postgres2 -d ontop_psql
 
-FROM postgres:latest
+FROM postgres:9.6.2
 
 RUN apt-get  update && apt-get install -y wget
 

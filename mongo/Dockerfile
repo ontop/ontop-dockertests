@@ -1,4 +1,4 @@
-FROM mongo:latest
+FROM mongo:3.4.2
 
 # change the directory where data will be stored
 RUN mkdir -p /data/mongo_data \

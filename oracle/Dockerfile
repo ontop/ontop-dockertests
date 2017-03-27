@@ -1,5 +1,5 @@
 
-FROM wnameless/oracle-xe-11g
+FROM wnameless/oracle-xe-11g:16.04
 
 
 # copying all SQL files to this folder will automatically put them in the default DB
