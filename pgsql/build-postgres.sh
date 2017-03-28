@@ -1,2 +1,2 @@
 #/bin/bash
-docker build -t ontop/ontop-postgres -f Dockerfile .
+docker build -t ontop/ontop-pgsql -f Dockerfile .
