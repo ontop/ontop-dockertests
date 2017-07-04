@@ -1,1 +1,1 @@
-docker run --name ontop_mssql_running -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Mssql1.0' -p 1433:1433 -d ontop/ontop-mssql
+docker run --name ontop_mssql_running -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Mssql1.0' -p 1533:1433 -d ontop/ontop-mssql
