@@ -1,5 +1,5 @@
 
-FROM sath89/oracle-12c:master
+FROM sath89/oracle-12c:r1
 
 
 # copying all SQL files to this folder will automatically put them in the default DB
