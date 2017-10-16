@@ -1,4 +1,4 @@
-Pgsql image form postgres official to test [ontop system](https://github.com/ontop/ontop). It contains the databases used inside the module ontop-docker-tests.
+Pgsql image from postgres official to test [ontop system](https://github.com/ontop/ontop). It contains the databases used inside the module ontop-docker-tests.
 
 To start a container:
 ```
