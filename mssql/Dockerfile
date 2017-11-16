@@ -1,4 +1,4 @@
-FROM microsoft/mssql-server-linux:ctp2-1
+FROM microsoft/mssql-server-linux:2017-latest
 
 # Set this so that it skips prompting you during the mssql-tools package install
 ENV ACCEPT_EULA=Y \
