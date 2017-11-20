@@ -1,4 +1,6 @@
-CREATE DATABASE universities;
+CREATE DATABASE university;
+
+\connect university
 
 create table professors (
 	prof_id int primary key,

@@ -17,7 +17,7 @@ insert into "SYSTEM".professors (prof_id, first_name, last_name) values (8, 'Mar
 create table "SYSTEM".teaching (
 	course_id VARCHAR2(100) NOT NULL,
 	prof_id NUMBER NOT NULL,
-	foreign key (prof_id) REFERENCES professors(prof_id)
+	foreign key (prof_id) REFERENCES "SYSTEM".professors(prof_id)
 );
 
 insert into "SYSTEM".teaching (course_id, prof_id) values ('LinearAlgebra', 1);
