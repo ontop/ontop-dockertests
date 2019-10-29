@@ -1,5 +1,5 @@
 create table "SYSTEM".professors (
-	prof_id NUMBER primary key,
+	prof_id NUMBER(9) primary key,
 	first_name VARCHAR2(100) NOT NULL,
 	last_name VARCHAR2(100) NOT NULL,
   nickname VARCHAR2(100)
@@ -16,7 +16,7 @@ insert into "SYSTEM".professors (prof_id, first_name, last_name) values (8, 'Mar
 
 create table "SYSTEM".course (
 	course_id VARCHAR2(100) primary key,
-	nb_students NUMBER NOT NULL,
+	nb_students NUMBER(9) NOT NULL,
 	duration decimal (10, 3) NOT NULL
 );
 
@@ -27,7 +27,7 @@ insert into "SYSTEM".course (course_id, nb_students, duration) values ('Scientif
 
 create table "SYSTEM".teaching (
 	course_id VARCHAR2(100) NOT NULL,
-	prof_id NUMBER NOT NULL,
+	prof_id NUMBER(9) NOT NULL,
 	primary key (course_id, prof_id),
 	foreign key (prof_id) REFERENCES "SYSTEM".professors(prof_id),
 	foreign key (course_id) REFERENCES "SYSTEM".course(course_id)
