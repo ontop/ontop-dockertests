@@ -1,17 +1,9 @@
+FROM ibmcom/db2
 
-FROM ibmcom/db2express-c:10.5.0.5-3.10.0
-
+RUN mkdir /var/custom
 RUN mkdir -p /tmp/sql_scripts/
 
 COPY sql/*.sql /tmp/sql_scripts/
-COPY load-scripts-db2.sh /home/db2inst1/
+COPY load-scripts-db2.sh /var/custom/
 
-RUN su - db2inst1 -c "db2start && /home/db2inst1/load-scripts-db2.sh" \
-	&& su - db2inst1 -c "db2stop force"
-
-#docker exec -it db2expc  bash
-#db2expc, a container name created while starting Docker container
-#Then, please switch to the default db2 instance user db2inst1 to create a sample database if you want :
-#$ su - db2inst1
-#$ db2sampl
-
+RUN chmod a+x /var/custom/load-scripts-db2.sh

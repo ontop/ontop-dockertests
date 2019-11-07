@@ -9,7 +9,3 @@ COPY sql/*.sql /docker-entrypoint-initdb.d/
 RUN wget -P /tmp/sql_scripts/ -o log  http://obdavm.inf.unibz.it/dumps/fbapp.sql.zip && \
 unzip /tmp/sql_scripts/fbapp.sql.zip -d /docker-entrypoint-initdb.d/ && \
 rm -fv /tmp/sql_scripts/fbapp.sql.zip
-
-
-
-
