@@ -1,4 +1,4 @@
-Oracle image fromsath89/oracle-12c to test [ontop system](https://github.com/ontop/ontop). It contains the databases used inside the module ontop-docker-tests.
+Oracle image truevoly/oracle-12c to test [ontop system](https://github.com/ontop/ontop). It contains the databases used inside the module ontop-docker-tests.
 
 To start a container:
 ```
