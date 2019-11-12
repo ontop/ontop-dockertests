@@ -34,17 +34,17 @@ To start the containers:
 
   ### Build images from local Dockerfiles
   1. Create the .env file in which all the passwords are specified:
-    ```
-    cp .env.example .env
-    ```
+  ```
+  cp .env.example .env
+  ```
   2. Build the docker images:
-    ```
-    docker-compose build 
-    ```
+  ```
+  docker-compose build 
+  ```
   3. Start the Docker container:
-    ```
-    docker-compose up
-    ```
+  ```
+  docker-compose up
+  ```
   The container is run on the foreground and can be stopped by pressing CTRL-C.
 
   4. Stop and remove the containers:
