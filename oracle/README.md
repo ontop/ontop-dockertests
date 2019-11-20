@@ -10,7 +10,7 @@ The Dockerfile and associated scripts are licensed under the Apache License 2.0.
 ## Troubleshooting
 
 ### Account blocked
-TODO: prevent this problem.
+May happen if wrong passwords are tried too many times.
 
 Error message:  `ORA-28000: the account is locked`.
 
@@ -24,8 +24,13 @@ conn sys as sysdba
 ```
 Password: oracle (by default)
 ```sql
-ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
 ALTER USER SYSTEM ACCOUNT UNLOCK;
+```
+
+Bonus:
+```sql
+ALTER PROFILE DEFAULT LIMIT FAILED_LOGIN_ATTEMPTS 1000;
+ALTER PROFILE DEFAULT LIMIT PASSWORD_LOCK_TIME 0.001;
 ```
 To exit
 ```sh
