@@ -2,7 +2,8 @@ version: '3'
 
 services:
     pgsql:
-      image: ontop/ontop-pgsql
+      image: ontop_pgsql
+      build: ./pgsql
       env_file: .env
       container_name: ontop_pgsql_running
       ports: 
@@ -11,14 +12,17 @@ services:
         - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
 
     oracle:
-      image: ontop/ontop-oracle
+      image: ontop_oracle
+      build: ./oracle
+      env_file: .env
       container_name: ontop_oracle_running
       ports:
         - "49160:8080"
         - "49161:1521"
 
     mssql:
-      image: ontop/ontop-mssql
+      image: ontop_mssql
+      build: ./mssql
       env_file: .env
       container_name: ontop_mssql_running
       ports:
@@ -28,7 +32,8 @@ services:
         - ACCEPT_EULA=Y
 
     mysql:
-      image: ontop/ontop-mysql
+      image: ontop_mysql
+      build: ./mysql
       env_file: .env
       container_name: ontop_mysql_running
       ports:
@@ -37,12 +42,14 @@ services:
        - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
 
     db2:
-      image: ontop/ontop-db2
-      env_file: .env 
+      image: ontop_db2
+      build: ./db2
+      env_file: .env
       container_name: ontop_db2_running
       privileged: true
       ports:
         - "50000:50000"
       environment:
-       - DB2INST1_PASSWORD=${DB2INST1_PASSWORD}
+       - DB2INST1_PASSWORD=${obda-pwd}
        - LICENSE=accept
+      
