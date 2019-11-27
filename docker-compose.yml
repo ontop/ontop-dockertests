@@ -11,13 +11,14 @@ services:
         - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
 
     oracle:
-      image: ontop_oracle
       build: ./oracle
       env_file: .env
       container_name: ontop_oracle_running
       ports:
         - "49160:8080"
         - "49161:1521"
+      environment:
+        - ORACLE_PASSWORD=${ORACLE_PASSWORD}
 
     mssql:
       image: ontop/ontop-mssql
