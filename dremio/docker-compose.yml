@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  dremio:
+    image: registry.gitlab.com/ontopic/private-docker-images/ontop_dremio
+    container_name: ontop_dremio_running
+    ports:
+      - "9047:9047"
+      - "31010:31010"
+      - "45678:45678"
+
+  pgsql:
+    image: ontop/ontop-pgsql
+    env_file: .env
+    container_name: ontop_pgsql_running
+    ports: 
+      - "7777:5432"
+    environment: 
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+
+  mysql:
+    image: ontop/ontop-mysql
+    env_file: .env
+    container_name: ontop_mysql_running
+    ports:
+      - "3694:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+
+  mssql:
+    image: ontop/ontop-mssql
+    env_file: .env
+    container_name: ontop_mssql_running
+    ports:
+      - "1533:1433"
+    environment:
+      - SA_PASSWORD=${SA_PASSWORD}
+      - ACCEPT_EULA=Y
