@@ -11,7 +11,7 @@ To run the docker-compose file copy the .env.example file into the dremio folder
     cp .env.example ./dremio/.env
 ```
 
-This Dremio image contains views of the DB 'university' from Postgresql, Microsoft Server SQL e MySQL
+This Dremio image contains views of the DB 'university' from Postgresql, Microsoft Server SQL, Oracle e MySQL
 
 ## Dremio User data:
 First Name: admin
