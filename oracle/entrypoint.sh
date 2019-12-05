@@ -1,8 +1,6 @@
 #!/bin/bash
 
-set -e
-
-if [ "${LICENSE}" = "accept" ]; then
+if [ "${LICENSE}" == "accept" ]; then
    exec $ORACLE_BASE/$RUN_FILE
 else
   echo "You must accept the license"
