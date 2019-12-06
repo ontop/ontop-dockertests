@@ -5,6 +5,8 @@ To start a container:
 docker run --name ontop_oracle_running -d -p 49160:8080 -p 49161:1521 -e LICENSE=accept ontop/ontop-oracle
 ```
 License
+By setting the env variable `LICENSE` to `"accept"`, you are accepting the [Oracle Database Express Edition license](https://docs.oracle.com/en/database/oracle/oracle-database/18/xelic/licensing-information.html).
+
 The Dockerfile and associated scripts are licensed under the Apache License 2.0. 
 
 ## Troubleshooting
