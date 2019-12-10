@@ -19,8 +19,8 @@ services:
       ports:
         - "49160:8080"
         - "49161:1521"
-        environment:
-          - LICENSE=accept
+      environment:
+        - LICENSE=accept
 
     mssql:
       image: ontop_mssql
