@@ -1,3 +1,3 @@
 FROM registry.gitlab.com/ontopic/private-docker-images/ontop_dremio
 
-#includes views of some....
+#image with created user
