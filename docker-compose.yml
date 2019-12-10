@@ -18,8 +18,8 @@ services:
         - "49160:8080"
         - "49161:1521"
       environment:
-        - ORACLE_PASSWORD=${ORACLE_PASSWORD}
-
+        - LICENSE=accept
+        
     mssql:
       image: ontop/ontop-mssql
       env_file: .env
@@ -49,3 +49,4 @@ services:
       environment:
        - DB2INST1_PASSWORD=${DB2INST1_PASSWORD}
        - LICENSE=accept
+      
