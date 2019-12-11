@@ -32,3 +32,11 @@ Insert into SYSTEM.BOOKS (ID,TITLE,PRICE,DISCOUNT,DESCRIPTION,LANG,PUBLICATION_D
 
   ALTER TABLE "SYSTEM"."BOOKS" ADD CONSTRAINT "BOOKS_PKEY" PRIMARY KEY ("ID") ENABLE;
   ALTER TABLE "SYSTEM"."BOOKS" MODIFY ("ID" NOT NULL ENABLE);
+
+  --------------------------------------------------------
+--  Grant DBMS_Crypto privileges
+--------------------------------------------------------
+
+  CONNECT sys/oracle as sysdba;
+
+  GRANT EXECUTE ON sys.dbms_crypto TO "SYSTEM";
