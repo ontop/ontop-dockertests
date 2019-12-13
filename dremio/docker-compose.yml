@@ -2,7 +2,7 @@ version: '3'
 
 services:
   dremio:
-    image: registry.gitlab.com/ontopic/private-docker-images/ontop_dremio
+    build: ./
     container_name: ontop_dremio_running
     ports:
       - "9047:9047"
@@ -46,5 +46,7 @@ services:
       - "49161:1521"
     environment:
       - ORACLE_PASSWORD=oracle
+      - LICENSE=accept
+  
+  #IBM DB2 connector is not supported anymore by Dremio
 
- #IBM DB2 connector is not supported anymore by Dremio

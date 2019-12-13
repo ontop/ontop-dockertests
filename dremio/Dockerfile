@@ -1,3 +1,6 @@
 FROM registry.gitlab.com/ontopic/private-docker-images/ontop_dremio
 
-#image with created user
+COPY /json/source.sh ../../temp/
+COPY /json/*.json ../../temp/
+
+CMD [ "../../temp/source.sh" ]

@@ -1,0 +1,26 @@
+{
+    "entityType": "source",
+    "config": {
+        "username": "SA",
+        "password": "Mssql1.0",
+        "hostname": "mssql",
+        "port": "1433",
+        "authenticationType": "MASTER",
+        "fetchSize": 200
+      },
+    "type": "MSSQL",
+    "name": "MSSQL_DB",
+    "metadataPolicy": {
+      "authTTLMs": 86400000,
+      "namesRefreshMs": 3600000,
+      "datasetRefreshAfterMs": 3600000,
+      "datasetExpireAfterMs": 10800000,
+      "datasetUpdateMode": "PREFETCH_QUERIED",
+      "deleteUnavailableDatasets": true,
+      "autoPromoteDatasets": false
+    },
+    "accelerationGracePeriodMs": 10800000,
+    "accelerationRefreshPeriodMs": 3600000,
+    "accelerationNeverExpire": false,
+    "accelerationNeverRefresh": false
+  }
