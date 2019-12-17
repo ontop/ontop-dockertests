@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 content=$(curl -X POST \
   http://localhost:9047/apiv2/login \
   -H 'Content-Type: application/json' \
@@ -11,7 +12,13 @@ curl -X POST \
   http://localhost:9047/api/v3/catalog \
   -H "Authorization: ${tokenstring}" \
   -H "Content-Type: application/json" \
-  -d "@pgsource.json"
+  -d "@pguniversitysource.json"
+
+  curl -X POST \
+  http://localhost:9047/api/v3/catalog \
+  -H "Authorization: ${tokenstring}" \
+  -H "Content-Type: application/json" \
+  -d "@pgbooksource.json"
 
 curl -X POST \
   http://localhost:9047/api/v3/catalog \
@@ -31,8 +38,3 @@ curl -X POST \
   -H "Content-Type: application/json" \
   -d "@mysqlsource.json"
     
-    
- 
-
-
-

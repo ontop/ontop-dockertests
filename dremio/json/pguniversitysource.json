@@ -10,7 +10,7 @@
         "databaseName": "university"
       },
     "type": "POSTGRES",
-    "name": "postgres_DB",
+    "name": "postg_university",
     "metadataPolicy": {
       "authTTLMs": 86400000,
       "namesRefreshMs": 3600000,
@@ -25,5 +25,3 @@
     "accelerationNeverExpire": false,
     "accelerationNeverRefresh": false
   }
-  
-
