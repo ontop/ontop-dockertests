@@ -4,10 +4,11 @@ USER root
 
 RUN apt-get update && apt-get -y install jq
 
-COPY /json/source.sh ../../temp/
-COPY /json/*.json ../../temp/
+COPY /json/source.sh ./
+COPY /json/*.json    ./
 
 USER dremio
+
 
 
 
