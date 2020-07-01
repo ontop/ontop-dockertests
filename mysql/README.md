@@ -7,8 +7,3 @@ docker run --name ontop_mysql_running -p 3694:3306 -e MYSQL_ROOT_PASSWORD=mysql 
 ```
 License
 The Dockerfile and associated scripts are licensed under the Apache License 2.0. 
-
-
-## Building
-
-For building the regular Docker image, please comment out the lines downloading the fish bank dataset in the Dockerfile.
