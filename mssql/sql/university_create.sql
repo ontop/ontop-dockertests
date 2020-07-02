@@ -29,7 +29,6 @@ insert into course (course_id, nb_students, duration) values ('LinearAlgebra', 1
 insert into course (course_id, nb_students, duration) values ('DiscreteMathematics', 11, 30);
 insert into course (course_id, nb_students, duration) values ('AdvancedDatabases', 12, 20);
 insert into course (course_id, nb_students, duration) values ('ScientificWriting', 13, 18);
-insert into course (course_id, nb_students, duration) values ('OperatingSystems', 10, 30);
 
 create table teaching (
 	course_id varchar(100) NOT NULL,
@@ -43,4 +42,3 @@ insert into teaching (course_id, prof_id) values ('LinearAlgebra', 1);
 insert into teaching (course_id, prof_id) values ('DiscreteMathematics', 1);
 insert into teaching (course_id, prof_id) values ('AdvancedDatabases', 3);
 insert into teaching (course_id, prof_id) values ('ScientificWriting', 8);
-insert into teaching (course_id, prof_id) values ('OperatingSystems', 1);
