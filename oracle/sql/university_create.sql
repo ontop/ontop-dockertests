@@ -24,7 +24,6 @@ insert into "SYSTEM".course (course_id, nb_students, duration) values ('LinearAl
 insert into "SYSTEM".course (course_id, nb_students, duration) values ('DiscreteMathematics', 11, 30);
 insert into "SYSTEM".course (course_id, nb_students, duration) values ('AdvancedDatabases', 12, 20);
 insert into "SYSTEM".course (course_id, nb_students, duration) values ('ScientificWriting', 13, 18);
-insert into "SYSTEM".course (course_id, nb_students, duration) values ('OperatingSystems', 10, 30);
 
 create table "SYSTEM".teaching (
 	course_id VARCHAR2(100) NOT NULL,
@@ -38,4 +37,3 @@ insert into "SYSTEM".teaching (course_id, prof_id) values ('LinearAlgebra', 1);
 insert into "SYSTEM".teaching (course_id, prof_id) values ('DiscreteMathematics', 1);
 insert into "SYSTEM".teaching (course_id, prof_id) values ('AdvancedDatabases', 3);
 insert into "SYSTEM".teaching (course_id, prof_id) values ('ScientificWriting', 8);
-insert into "SYSTEM".teaching (course_id, prof_id) values ('OperatingSystems', 1);
