@@ -1,33 +1,21 @@
-# Docker
+# Build the docker image 
+`build-dremio.sh`
+The content of ./backup (at the moment where the image is built) is copied to the image
 
-## Build an image from a Dockerfile 
-`docker build --tag <IMAGE_NAME>:<VERSION> <PATH>`
-where <PATH> is the directory containing the Dockerfile
-
-## Add a volume when creating an image
-in the Dockerfile, add:
-`VOLUME  <VOLUME_PATH>`
-where <VOLUME_PATH> is the path to the volume in the container
-
-## Bind a volume to a file when creating a container:
-Use docker run (as above) with the additional option:
-`-v my_volume:<CONTAINER_PATH>`
-
-# SSH into a container
-`docker exec -it <CONTAINER_NAME> /bin/bash`
+# Start a container
+`run-dremio.sh`
+Dremio will load the the backup files that was copied when building the image.
+In addition, the content of ./backup will be mounted to /tmp/dremio_backup in the container, in order to save changes made to the Dremio configuration 
 
 
-# Dremio
-
-## backup
-<DREMIO_HOME>/bin/dremio-admin backup
-    -u <DREMIO_ADMIN_USER> \
-    -p <DREMIO_ADMIN_PASS> \
-    -d <BACKUP_PATH>
-
-## restore
-<DREMIO_HOME>/bin/dremio-admin -r <BACKUP_PATH>
-
-
-## Create a bare Docker container from the Dremio image
-`docker run -p 9047:9047 -p 31010:31010 -p 45678:45678 dremio/dremio-oss`
+# Edit the Dremio configurarion (data sources, reflections, etc.) with the Dremio GUI
+. Start a container:
+`run-dremio.sh`
+. Use the web GUI to edit the configuration:
+address: http://localhost:9047/)
+id: "dremio"
+pwd: "dremio123"
+. Backup into /tmp/dremio_backup in the container (this will update the content of ./backup on the host).
+`./backup-dremio.sh`
+. Re-build the image with the updated backup files:
+`build-dremio.sh`

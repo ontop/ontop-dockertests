@@ -4,16 +4,17 @@
 `docker build --tag <image_NAME>:<VERSION> <PATH>`
 where <PATH> is the directory containing the Dockerfile
 
-## Add a volume when creating an image
-in the Dockerfile, add:
-`VOLUME  <VOLUME_PATH>`
-where <VOLUME_PATH> is the path to the volume in the container
+## Include a file/folder to an image
+in the Dockerfile:
+COPY <HOST_PATH> <CONTAINER_PATH>
+where <HOST_PATH> is the path to the file/folder on the host,
+and <CONTAINER_PATH> is the path to the file/folder on the container
 
-## Bind a volume to a file when creating a container:
+## Bind-mount a file/folder when creating a container:
 Use docker run (see below for Dremio) with the additional option:
-`-v <VOLUME_NAME>:<VOLUME_PATH>`
-where <VOLUME_PATH> is the path to the volume in the container
-If the volume does not exist already (on the host), then it will be created.
+`-v <HOST_PATH>:<CONTAINER_PATH>`
+where <HOST_PATH> is the path to the file/folder on the host,
+and <CONTAINER_PATH> is the path to the file/folder on the container.
 
 ## Listen to host from a container
 Use docker run (see below for Dremio) with the additional option:
@@ -31,7 +32,7 @@ Use docker run (see below for Dremio) with the additional option:
 <DREMIO_HOME>/bin/dremio-admin backup
     -u <DREMIO_ADMIN_USER> \
     -p <DREMIO_ADMIN_PASS> \
-    -d <BACKUP_PATH>
+    -d <BACKUP_DIRECTORY>
 
 ## restore
 <DREMIO_HOME>/bin/dremio-admin -r <BACKUP_PATH>
