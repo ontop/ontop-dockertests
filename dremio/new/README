@@ -3,16 +3,18 @@
 The content of ./backup (at the moment where the image is built) is copied to the image
 When starting a container created from this image, Dremio will restore from this backup.
 
-# Create and start a container
+
+# Create and start a "read-only" container
 `run-dremio.sh`
-The content of ./backup will be mounted to /tmp/dremio/backup in the container, allowing to save changes made to the Dremio configuration within the container.
+
 
 
 # Edit the Dremio configurarion (data sources, reflections, etc.) with the Dremio GUI
 
 . Create and start a container:
-`run-dremio.sh`
-or restart an existing container:
+`runMount-dremio.sh`
+The content of ./backup will be mounted to /tmp/dremio/backup in the container, allowing to save changes made to the Dremio configuration.
+Alternatively, restart an existing container where this folder was mounted:
 `docker start <CONTAINER_ID>`
 
 . Use the web GUI to edit the configuration:
@@ -24,4 +26,4 @@ pwd: "dremio123"
 `./backup-dremio.sh <CONTAINER_ID>`
 
 . Re-build the image with the updated backup files:
-`build-dremio.sh`
+build-dremio.sh`
