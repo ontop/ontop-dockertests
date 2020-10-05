@@ -1,0 +1,3 @@
+FROM registry.gitlab.com/ontopic/private-docker-images/ontop_dremio
+
+#includes views of some....
