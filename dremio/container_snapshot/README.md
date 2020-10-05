@@ -5,6 +5,7 @@ To run empty Dremio:
 ```
 
 ## Dremio image
+This image was created from a container snapshot, with docker commit (see "https://docs.docker.com/engine/reference/commandline/commit/").
 
 To run the docker-compose file copy the .env.example file into the dremio folder
 ```
