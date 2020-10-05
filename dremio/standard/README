@@ -22,5 +22,8 @@ The address is: http://localhost:9047/
 . Stop the running dremio_ontop container:
 `docker stop <CONTAINER_ID>`
 
+. as sudoer, execute:
+`chmod -R a+rwx ./backup/*`
+
 . Re-build the image with the updated backup files:
 `./build-dremio.sh`
