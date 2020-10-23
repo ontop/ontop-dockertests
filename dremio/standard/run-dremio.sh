@@ -4,5 +4,5 @@ docker run \
 -p 31010:31010 \
 -p 45678:45678 \
 --net="host" \
-dremio_ontop:latest
-
+dremio_ontop:latest \
+& disown
