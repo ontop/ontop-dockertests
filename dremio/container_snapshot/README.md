@@ -9,7 +9,7 @@ This image was created from a container snapshot, with docker commit (see "https
 
 To run the docker-compose file copy the .env.example file into the dremio folder
 ```
-    cp .env.example ./dremio/.env
+    cp .env.example ./dremio/container_snapshot/.env
 ```
 
 This Dremio image contains views of the DB 'university' from Postgresql, Microsoft Server SQL, Oracle e MySQL
