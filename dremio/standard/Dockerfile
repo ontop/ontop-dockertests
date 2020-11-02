@@ -1,4 +1,4 @@
-FROM dremio/dremio-oss:latest
+FROM dremio/dremio-oss:4.8
 
 RUN kill 1
 
