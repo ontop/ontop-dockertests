@@ -8,6 +8,3 @@ COPY sql/*.sql.gz /docker-entrypoint-initdb.d/
 COPY sql/*.dump /tmp/sql_scripts/
 
 COPY load-scripts-postgres.sh /docker-entrypoint-initdb.d/
-
-#get imdb database dump file
-RUN wget -P /tmp/sql_scripts/ -o log  http://obdavm.inf.unibz.it/dumps/imdbobda-pgsql.dump
