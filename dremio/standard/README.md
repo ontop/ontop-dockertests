@@ -1,6 +1,6 @@
 # Build the Dremio image 
 `build-dremio.sh`
-The content of ./backup (at the moment where the image is built) is copied to the image
+The content of ./backup (at the time when the image is built) is copied to the image
 When starting a container created from this image, Dremio will restore from this backup.
 
 # Create and start a "read-only" container
