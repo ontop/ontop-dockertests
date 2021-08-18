@@ -1,3 +1,4 @@
+ALTER SESSION SET "_ORACLE_SCRIPT"=true;
 
 CREATE USER hr IDENTIFIED BY oracle;
 
@@ -9,6 +10,7 @@ ALTER USER hr TEMPORARY TABLESPACE TEMP;
 GRANT CREATE SESSION, CREATE VIEW, ALTER SESSION, CREATE SEQUENCE TO hr;
 GRANT CREATE SYNONYM, CREATE DATABASE LINK, RESOURCE , UNLIMITED TABLESPACE TO hr;
 
+ALTER SESSION SET "_ORACLE_SCRIPT"=false;
 --------------------------------------------------------
 --  File created - Friday-July-28-2017
 --------------------------------------------------------
