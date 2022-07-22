@@ -7,3 +7,4 @@ COPY *.sql /tmp/sql_scripts/
 COPY load-scripts-db2.sh /var/custom/
 
 RUN chmod a+x /var/custom/load-scripts-db2.sh
+#RUN /var/custom/load-scripts-db2.sh

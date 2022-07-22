@@ -1,6 +1,7 @@
-CREATE DATABASE UNIVERSITY;
+-- Database name in DB2 has to be 8 chars or less
+CREATE DATABASE UNIVER;
 
-CONNECT TO UNIVERSITY;
+CONNECT TO UNIVER;
 
 create table professors (
 	prof_id int primary key NOT NULL,

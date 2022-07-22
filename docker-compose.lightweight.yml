@@ -50,5 +50,6 @@ services:
     ports:
       - "50000:50000"
     environment:
-      - DB2INST1_PASSWORD=${obda-pwd}
+      - DB2INSTANCE=db2inst1
+      - DB2INST1_PASSWORD=${DB2INST1_PASSWORD}
       - LICENSE=accept
