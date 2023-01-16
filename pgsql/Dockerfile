@@ -1,4 +1,5 @@
-FROM postgres:9.6.15
+# FROM postgres:9.6.15
+FROM postgres:15.1
 
 RUN apt-get  update && apt-get install -y wget
 
